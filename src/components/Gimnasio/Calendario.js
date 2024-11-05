@@ -4,18 +4,16 @@ import './CalendarioSemanal.css';
 const urlsJson = ['/cupos.json', '/cupos_alt.json'];
 
 function CalendarioSemanal() {
-  const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+  const diasSemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
   const bloquesHorario = [
-    '08:00 - 09:00',
-    '09:00 - 10:00',
-    '10:00 - 11:00',
-    '11:00 - 12:00',
-    '12:00 - 13:00',
-    '13:00 - 14:00',
-    '14:00 - 15:00',
-    '15:00 - 16:00',
-    '16:00 - 17:00',
-    '17:00 - 18:00'
+    '09:40 - 10:50',
+    '11:05 - 12:15',
+    '12:30 - 13:40',
+    '14:40 - 15:50',
+    '16:05 - 17:15',
+    '17:30 - 18:40',
+    '18:50 - 20:00',
+    '20:15 - 21:25'
   ];
 
   const [contadores, setContadores] = useState({});
@@ -24,7 +22,7 @@ function CalendarioSemanal() {
   const [selectedDia, setSelectedDia] = useState(null);
   const [selectedBloque, setSelectedBloque] = useState(null);
 
-  const semanaTitulo = jsonIndex === 0 ? 'Semana 1' : 'Semana 2';
+  const semanaTitulo = jsonIndex === 0 ? 'Semana 11/11 - 15/11' : 'Semana 18/11 - 22/11';
 
   useEffect(() => {
     fetch(urlsJson[jsonIndex])
@@ -76,12 +74,13 @@ function CalendarioSemanal() {
   return (
     <div>
       <h2>{semanaTitulo}</h2>
-      <button onClick={retrocederJSON} disabled={jsonIndex === 0}>
-        Volver
+      <button className="boton-navegacion" onClick={retrocederJSON} disabled={jsonIndex === 0}>
+        Anterior
       </button>
-      <button onClick={avanzarJSON} disabled={jsonIndex === urlsJson.length - 1}>
-        Avanzar
+      <button className="boton-navegacion" onClick={avanzarJSON} disabled={jsonIndex === urlsJson.length - 1}>
+        Siguiente
       </button>
+
 
       <div className="calendario-semanal">
         <div className="horarios">
@@ -120,8 +119,8 @@ function CalendarioSemanal() {
             <p>
               ¿Deseas agendar tu hora para el <b>{selectedDia}</b> en el bloque <b>{selectedBloque}</b>?
             </p>
-            <button onClick={cerrarModal}>Cancelar</button>
-            <button onClick={confirmarIncremento}>Aceptar</button>
+            <button className="cancelar" onClick={cerrarModal}>Cancelar</button>
+            <button className="aceptar" onClick={confirmarIncremento}>Aceptar</button>
           </div>
         </div>
       )}
