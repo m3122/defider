@@ -23,8 +23,7 @@ function CalendarioSemanal() {
   const [showModal, setShowModal] = useState(false);
   const [selectedDia, setSelectedDia] = useState(null);
   const [selectedBloque, setSelectedBloque] = useState(null);
-  
-  // Definición del título de la semana
+
   const semanaTitulo = jsonIndex === 0 ? 'Semana 1' : 'Semana 2';
 
   useEffect(() => {
@@ -48,7 +47,7 @@ function CalendarioSemanal() {
 
   const abrirModal = (dia, bloque) => {
     const cupos = contadores[dia]?.[bloque] ?? 0;
-    if (cupos < 15) { // Verifica si el horario tiene cupos disponibles
+    if (cupos < 15) {
       setSelectedDia(dia);
       setSelectedBloque(bloque);
       setShowModal(true);
@@ -76,7 +75,7 @@ function CalendarioSemanal() {
 
   return (
     <div>
-      <h3>{semanaTitulo}</h3> {/* Título de la semana */}
+      <h2>{semanaTitulo}</h2>
       <button onClick={retrocederJSON} disabled={jsonIndex === 0}>
         Volver
       </button>
@@ -85,25 +84,34 @@ function CalendarioSemanal() {
       </button>
 
       <div className="calendario-semanal">
-        {diasSemana.map((dia) => (
-          <div key={dia} className="dia">
-            <h3>{dia}</h3>
-            {bloquesHorario.map((bloque) => {
-              const cupos = contadores[dia]?.[bloque] ?? 0;
-              const cuposLlenos = cupos >= 15;
-              return (
-                <div
-                  key={bloque}
-                  className={`bloque-horario ${cuposLlenos ? 'sin-cupos' : 'con-cupos'}`}
-                  onClick={() => abrirModal(dia, bloque)}
-                >
-                  <strong>{bloque}</strong>
-                  <div>Cupos: {cupos} / 15</div>
-                </div>
-              );
-            })}
-          </div>
-        ))}
+        <div className="horarios">
+          <h3>Horario</h3>
+          {bloquesHorario.map((bloque) => (
+            <div key={bloque} className="bloque-horario">
+              <strong>{bloque}</strong>
+            </div>
+          ))}
+        </div>
+        <div className="dias">
+          {diasSemana.map((dia) => (
+            <div key={dia} className="dia">
+              <h3>{dia}</h3>
+              {bloquesHorario.map((bloque) => {
+                const cupos = contadores[dia]?.[bloque] ?? 0;
+                const cuposLlenos = cupos >= 15;
+                return (
+                  <div
+                    key={bloque}
+                    className={`cupos ${cuposLlenos ? 'sin-cupos' : 'con-cupos'}`}
+                    onClick={() => abrirModal(dia, bloque)}
+                  >
+                    <div>Cupos: {cupos} / 15</div>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+        </div>
       </div>
 
       {showModal && (
