@@ -1,35 +1,9 @@
-# frontend-sample-app
+# La branch funcional es "gimnasio", por favor utilizar esa.
 
-Basic Frontend Development Environment to start an app with Webpack
+Para levantar el proyecto primero hay que ejecutar el comando "npm install" y luego "npm start"
 
-This repo includes `Webpack` to start an environment to build frontend views using `React`.
+versiones:
+npm 10.9.0
+node v22.11.0
 
-### Requirements
-
-- Node >= 16.13.1
-- npm >= 8.1.2
-
-### Quick start
-
-Install dependences
-
-```
-npm install
-```
-
-Launch environment
-
-```
-npm run dev
-```
-
-Now you can open http://localhost:5050
-
-### Packages included
-
-- [Webpack](https://webpack.js.org/)
-- [React Router](https://reactrouter.com/en/main)
-
-### About stylesheets
-
-- Sample stylesheets were written using the [BEM](https://getbem.com/) structure
+Desarrollado en Windows
