@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { useNavigate } from 'react-router-dom';
+import './carousel.css';
 
 import imagen1 from '../assets/desarrollo.jpg';
 import imagen2 from '../assets/estadio.jpg';
