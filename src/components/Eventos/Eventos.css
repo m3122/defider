@@ -1,0 +1,121 @@
+.events-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .events-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .month-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  
+    .nav-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      
+      .arrow {
+        font-size: 1.2rem;
+      }
+      
+      &:hover:not(:disabled) {
+        opacity: 0.7;
+      }
+  
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+  
+    .month-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      min-width: 120px;
+      text-align: center;
+    }
+  }
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .event-item {
+    display: flex;
+    gap: 2rem;
+    
+    .event-date {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 120px;
+      
+      .day-name {
+        font-size: 0.9rem;
+        color: #666;
+        text-transform: uppercase;
+      }
+      
+      .day-number {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+    
+    .event-content {
+      flex: 1;
+      
+      .event-details {
+        background-color: #e0e0e0;
+        padding: 1.5rem;
+        border-radius: 4px;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+  
+        .event-title {
+          font-size: 1.1rem;
+          color: #333;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .events-container {
+      padding: 1rem;
+    }
+    
+    .event-item {
+      gap: 1rem;
+      
+      .event-date {
+        min-width: 90px;
+        
+        .day-number {
+          font-size: 1.5rem;
+        }
+      }
+  
+      .event-content {
+        .event-details {
+          padding: 1rem;
+          
+          .event-title {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  

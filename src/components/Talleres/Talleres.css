@@ -1,0 +1,7 @@
+.card-container-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta la cantidad de columnas */
+    gap: 16px; /* Espacio entre tarjetas */
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}

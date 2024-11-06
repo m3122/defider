@@ -1,7 +1,13 @@
-import React from 'react';
+import React from 'react'
+import Carousel from '../components/carousel'
 
-function Home() {
-  return <h2>Home Page</h2>;
+export const HomePage = () => {
+  return (
+    <>
+      <Carousel/>
+      <p>Página de inicio del DEFIDER</p>
+    </>
+  )
 }
 
-export default Home;
+export default HomePage

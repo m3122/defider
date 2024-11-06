@@ -1,0 +1,38 @@
+.seccion {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.descripcion {
+    margin: 20px;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.tabla {
+    width: 90%; /* Para que ocupe el ancho completo disponible */
+    border-collapse: collapse; /* Esto permite usar `border-spacing` */
+}
+
+.tabla th, .tabla td {
+    padding: 10px 20px; /* Aumenta el padding para darle más espacio a cada celda */
+    text-align: left; /* Alineación del texto a la izquierda */
+    border: 1px solid #ddd;
+}
+
+.tabla th {
+    font-weight: bold; /* Para destacar el header */
+    background-color: #f2f2f2; /* Fondo para los headers de la tabla */
+}
+
+.tabla td {
+    background-color: #ffffff; /* Fondo para las celdas de contenido */
+    border: 1px solid #ddd; /* Añade una separación sutil entre celdas */
+}
