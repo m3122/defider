@@ -1,0 +1,32 @@
+.modal-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal {
+    position: relative; /* Establece el contexto de posición */
+    border-radius: 5px;
+    padding: 1.5rem 2rem 2rem;
+    background-color: white;
+    width: 30em;
+}
+
+.close {
+    position: absolute; /* Posiciona la "X" en relación al modal */
+    top: -45px; /* Ajusta la posición en la esquina superior */
+    right: 10px; /* Ajusta la posición en la esquina derecha */
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+  
+  .modal-content {
+    margin-bottom: 2rem;
+  }

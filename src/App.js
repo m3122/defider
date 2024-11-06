@@ -6,6 +6,9 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Gimnasio from './components/Gimnasio/Gimnasio';
+import Deportes from './components/Deportes/Deportes';
+import DetalleDeporte from './components/Deportes/DetalleDeporte';
+import Talleres from './components/Talleres/Talleres';
 
 function App() {
   return (
@@ -15,8 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/talleres" element={<Talleres />} />
           <Route path="/gimnasio" element={<Gimnasio />} />
+          <Route path="/deportes" element={<Deportes />} />
+          <Route path="/deportes/:deporte" element={<DetalleDeporte />} />
         </Routes>
       </div>
     </Router>

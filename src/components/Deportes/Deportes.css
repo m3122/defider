@@ -1,0 +1,28 @@
+.title {
+    text-align: center;
+    padding-top: 20px;
+}   
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.card-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabla {
+    width: 700px;
+    border: 2px solid;
+    background: #C5D3E8;
+}
+
+.tabla:last-child {
+    margin-bottom: 30px;
+}
