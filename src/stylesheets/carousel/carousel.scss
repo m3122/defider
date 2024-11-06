@@ -1,0 +1,25 @@
+.news-carousel {
+    width: 100%;
+    margin: 20px 0; // Espaciado arriba y abajo
+  
+    .carousel-item {
+      display: flex;
+      flex-direction: column; // Para alinear la imagen y el contenido
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+  
+      .carousel-image {
+        display: block;
+        margin: 0 auto;
+        width: 50%; // O ajusta al tamaño deseado
+        height: auto; // Mantiene la proporción
+        object-fit: contain;
+      }
+  
+      .carousel-content {
+        text-align: center; // Centra el texto
+        padding: 10px; // Espaciado interno
+      }
+    }
+  }
