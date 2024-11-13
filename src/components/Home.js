@@ -25,7 +25,7 @@ export const HomePage = () => {
           <Link to="/talleres">
             <div className='image'>
               <img
-                src="https://usm.cl/wp-content/uploads/2022/03/Expo-DEFIDER-2-300x241.jpg"
+                src="https://i.imgur.com/6PliJ5r.jpeg"
                 alt="Background"
               />
               <div className='text-inside'>
