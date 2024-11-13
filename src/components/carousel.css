@@ -1,7 +1,14 @@
-.news-carousel {
-    width: 100%;
-    margin: 20px 0;
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+.news-carousel {
+  width: 70%; /* Ajusta esto para que se acomode mejor */
+  margin: 10px auto;
+}
+
 
 .carousel-item {
     display: flex;

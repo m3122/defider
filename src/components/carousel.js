@@ -49,21 +49,23 @@ const Carousel = () => {
   };
 
   return (
-    <div className='news-carousel'>
-      <Slider {...settings}>
-        {newsItems.map((item) => (
-          <div key={item.id} className='carousel-item'
-            onClick={() => handleItemClick(item.link)}
-            style={{cursor: 'pointer'}}
-            >
-            <img src={item.imageUrl} alt={item.title} className='carousel-image' />
-            <div className='carousel-content'>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+    <div className='carousel-containter'>
+      <div className='news-carousel'>
+        <Slider {...settings}>
+          {newsItems.map((item) => (
+            <div key={item.id} className='carousel-item'
+              onClick={() => handleItemClick(item.link)}
+              style={{cursor: 'pointer'}}
+              >
+              <img src={item.imageUrl} alt={item.title} className='carousel-image' />
+              <div className='carousel-content'>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
